@@ -1,0 +1,12 @@
+
+# Copyright 2011 Concentric Sky, Inc. All Rights Reserved.
+# http://www.concentricsky.com
+# This code may not be used without permission.
+
+Demonstrates that a single line comment in a function can break the WebView.
+
+Created with Eclipse.  The only changes made after a default new Android project are in SingleLineCommentTestActivity.java
+
+Further comments in the source.
+
+
