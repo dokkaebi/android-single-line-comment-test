@@ -16,13 +16,22 @@ public class SingleLineCommentTestActivity extends Activity {
         
         //set a chrome client to get console log output
         webView.setWebChromeClient(new WebChromeClient());
+        
+        //enable js
         webView.getSettings().setJavaScriptEnabled(true);
+        
+        //this code causes: Uncaught SyntaxError: Unexpected end of input at file:///android_asset/html/:1
+        
+	        //Comment out line 33: "(function() {//comment})()" +
+	        //Uncomment line 34: "//comment" +
+        	//note that the error is gone.
+        
         webView.loadDataWithBaseURL("file:///android_asset/html/", 
         		"<html>" +
         		"<head>" +
         			"<script type=\"text/javascript\">" +
 	        			"(function() {//comment})()" +
-	        			"//comment" +
+//	        			"//comment" +
         			"</script>" +
         		"</head>" +
         		"<body>hi</body>" +
