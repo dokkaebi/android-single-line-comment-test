@@ -1,3 +1,7 @@
+// Copyright 2011 Concentric Sky, Inc. All Rights Reserved.
+// http://www.concentricsky.com
+// This code may not be used without permission.
+
 package com.concentricsky.test.singlelinecomment;
 
 import android.R;
@@ -22,8 +26,8 @@ public class SingleLineCommentTestActivity extends Activity {
         
         //this code causes: Uncaught SyntaxError: Unexpected end of input at file:///android_asset/html/:1
         
-	        //Comment out line 33: "(function() {//comment})()" +
-	        //Uncomment line 34: "//comment" +
+	        //Comment out line 37: "(function() {//comment})()" +
+	        //Uncomment line 38: "//comment" +
         	//note that the error is gone.
         
         webView.loadDataWithBaseURL("file:///android_asset/html/", 
