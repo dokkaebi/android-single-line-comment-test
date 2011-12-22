@@ -4,7 +4,6 @@
 
 package com.concentricsky.test.singlelinecomment;
 
-import android.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebChromeClient;
@@ -24,13 +23,13 @@ public class SingleLineCommentTestActivity extends Activity {
         //enable js
         webView.getSettings().setJavaScriptEnabled(true);
         
-        //this code causes: Uncaught SyntaxError: Unexpected end of input at file:///android_asset/html/:1
+        //this code causes: Uncaught SyntaxError: Unexpected end of input at <data>:1
         
-	        //Comment out line 37: "(function() {//comment})()" +
-	        //Uncomment line 38: "//comment" +
+	        //Comment out line 36: "(function() {//comment})()" +
+	        //Uncomment line 37: "//comment" +
         	//note that the error is gone.
         
-        webView.loadDataWithBaseURL("file:///android_asset/html/", 
+        webView.loadData( 
         		"<html>" +
         		"<head>" +
         			"<script type=\"text/javascript\">" +
@@ -40,7 +39,7 @@ public class SingleLineCommentTestActivity extends Activity {
         		"</head>" +
         		"<body>hi</body>" +
         		"</html>", 
-        		"text/html", "utf-8", null);
+        		"text/html", "utf-8");
 
         
         setContentView(webView);
